@@ -70,7 +70,7 @@ document.getElementById('run').onclick = function() {
     xhttp.withCredentials = true;
 
     if (method === 'POST') {
-      xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhttp.setRequestHeader('Content-Type', 'application/json');
       xhttp.send(body);
     } else {
       xhttp.send();
