@@ -7,11 +7,12 @@
 <script>
 fetch("https://api-admin.paydo.com/v1/request/info", {
     method: "GET",
-    credentials: "include" 
+    credentials: "include"
 })
-.then(r => r.text())
+.then(r => r.json())
 .then(data => {
-    document.getElementById("output").textContent = data;
+    document.getElementById("output").textContent =
+        JSON.stringify(data, null, 2);
 })
 .catch(e => {
     document.getElementById("output").textContent = "Error: " + e;
